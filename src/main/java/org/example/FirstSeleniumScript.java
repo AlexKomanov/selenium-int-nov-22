@@ -48,6 +48,8 @@ public class FirstSeleniumScript {
         else {
             System.out.println("Oh No! A wrong place");
         }
+
         driver.quit();
+
     }
 }
