@@ -7,19 +7,23 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class FirstSeleniumScript {
     public static void main(String[] args) throws InterruptedException {
 
+        String currentUtl;
+        String title;
+
         WebDriverManager.chromedriver().clearDriverCache().setup();
         WebDriver driver = new ChromeDriver();
 
         driver.manage().window().maximize();
         driver.get("https://google.com");
 
-        String currentUtl = driver.getCurrentUrl();
+        currentUtl = driver.getCurrentUrl();
         System.out.println("currentUtl = " + currentUtl);
 
+        // Page source
 //        String pageSource = driver.getPageSource();
 //        System.out.println("pageSource = " + pageSource);
 
-        String title = driver.getTitle();
+        title = driver.getTitle();
         System.out.println("title = " + title);
 
         if(currentUtl.equals("https://www.google.com/") && title.equals("Google")) {
